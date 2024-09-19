@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Login</title>
+    <link rel="stylesheet" href="staff.css">
+</head>
+<body>
+    <div class="login-container">
+        <h1>Staff Login</h1>
+        <form id="loginForm">
+            <label for="password">Enter Access Code:</label><br>
+            <input type="password" id="password" name="password" required><br><br>
+            <button type="submit">Login</button>
+            <p id="message"></p>
+        </form>
+    </div>
+
+    <script>
+        const staffPassword = "67f30492c3bd409deb158fc74bd73260";
+
+        function hashPassword(password) {
+            return CryptoJS.MD5(password).toString();
+        }
+
+        document.getElementById("loginForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+            const enteredPassword = document.getElementById("password").value;
+            const hashedEnteredPassword = hashPassword(enteredPassword);
+
+            if (hashedEnteredPassword === staffPassword) {
+                localStorage.setItem("staffLoggedIn", "true");
+                window.location.href = "staff.html"; // Redirect to staff page
+            } else {
+                document.getElementById("message").innerText = "Invalid access code!";
+            }
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+</body>
+</html>

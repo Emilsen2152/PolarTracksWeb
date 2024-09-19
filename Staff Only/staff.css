@@ -1,0 +1,173 @@
+/* Staff Page Styles */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    margin: 20px 0;
+}
+
+h1 {
+    color: #53B2D3; /* Light Blue */
+}
+
+.logout-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #75BC75; /* Pale Green */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.logout-button:hover {
+    background-color: #53B2D3; /* Light Blue */
+}
+
+.info-cards {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.info-card {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 45%;
+}
+
+.info-card h2 {
+    color: #53B2D3; /* Light Blue */
+}
+
+.resources {
+    margin-top: 20px;
+}
+
+.resources h2 {
+    text-align: center;
+    color: #53B2D3; /* Light Blue */
+}
+
+.resources-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.resource {
+    display: block;
+    text-align: center;
+    width: 120px;
+}
+
+.resource img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.resource p {
+    font-size: 14px;
+}
+
+.footer {
+    width: 100%;
+    background-color: #fff;
+    color: #000;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+    border-top: 5px solid #53B2D3; /* Light Blue */
+}
+
+.footer-links {
+    margin-top: 10px;
+}
+
+.footer-links img {
+    width: 30px;
+    margin: 0 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .info-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info-card {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .resources-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .resource {
+        width: 80%;
+    }
+}
+
+/* Staff Notices Section */
+.staff-notices {
+    max-height: 400px; /* Adjust height as needed */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f4f4f4;
+}
+
+.notice {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.notice:last-child {
+    border-bottom: none; /* Remove border for last notice */
+}
+
+.notice-image {
+    width: 80px; /* Adjust size as needed */
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.notice-content h3 {
+    margin-top: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.notice-content p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Ensure styles are integrated with the existing site design */
+.info-card h2 {
+    font-size: 24px;
+    color: #333;
+}
